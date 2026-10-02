@@ -8,3 +8,8 @@ desktop.ini
 .vscode/
 .idea/
 node_modules/
+
+# Vercel
+.vercel/
+
+.vercel
