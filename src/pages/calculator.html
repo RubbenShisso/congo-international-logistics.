@@ -1,0 +1,54 @@
+---
+title: Cargo Calculator | Congo International Logistics SARL
+description: Free cargo calculator – work out the volume (CBM), volumetric weight and chargeable weight of your shipment for sea or air freight.
+page: calculator
+---
+<section class="page-hero">
+  <div class="page-hero-photo" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-i18n="nav.home">Home</a><span>/</span><span data-i18n="nav.calc">Calculator</span></nav>
+    <h1 data-i18n="calc.title">Cargo volume & weight calculator</h1>
+    <p data-i18n="calc.text">Measure your packages and see the volume (CBM) and chargeable weight before you ask for a quote.</p>
+  </div>
+</section>
+
+<section class="section calc-section" id="calculator">
+  <div class="container">
+    <div class="calc">
+      <div class="calc-inputs">
+        <div class="seg" role="tablist">
+          <button class="active" data-mode="sea" data-i18n="s1.t">Sea Freight</button>
+          <button data-mode="air" data-i18n="s2.t">Air Freight</button>
+        </div>
+        <div class="calc-grid">
+          <label><span data-i18n="c.l">Length (cm)</span><input type="number" min="0" id="cL" value="120"></label>
+          <label><span data-i18n="c.w">Width (cm)</span><input type="number" min="0" id="cW" value="80"></label>
+          <label><span data-i18n="c.h">Height (cm)</span><input type="number" min="0" id="cH" value="100"></label>
+          <label><span data-i18n="c.kg">Weight per piece (kg)</span><input type="number" min="0" id="cKg" value="250"></label>
+        </div>
+        <label class="qty"><span data-i18n="c.qty">Number of pieces</span>
+          <div class="stepper">
+            <button type="button" data-step="-1" aria-label="Fewer">−</button>
+            <input type="number" min="1" id="cQty" value="4">
+            <button type="button" data-step="1" aria-label="More">+</button>
+          </div>
+        </label>
+      </div>
+      <div class="calc-result">
+        <div class="res"><span data-i18n="c.vol">Total volume</span><strong id="rVol">0</strong><em>m³ (CBM)</em></div>
+        <div class="res"><span data-i18n="c.gross">Total gross weight</span><strong id="rGross">0</strong><em>kg</em></div>
+        <div class="res"><span data-i18n="c.volw">Volumetric weight</span><strong id="rVolW">0</strong><em id="rVolNote">kg</em></div>
+        <div class="res highlight"><span data-i18n="c.charge">Chargeable weight</span><strong id="rCharge">0</strong><em id="rChargeUnit">kg</em></div>
+        <p class="calc-note" id="calcNote"></p>
+        <button class="btn btn-gold" id="calcToQuote" data-i18n="c.use">Use in my quote</button>
+      </div>
+    </div>
+    <p class="disclaimer" data-i18n="c.disc">Estimates only, using standard industry ratios (sea 1 m³ = 1,000 kg · air 6,000 cm³ = 1 kg). Your final price is confirmed in your quote.</p>
+
+    <div class="tips">
+      <article><strong>CBM</strong><p data-i18n="tip.cbm">Cubic metre: length × width × height in metres. Used to price sea freight.</p></article>
+      <article><strong data-i18n="c.volw">Volumetric weight</strong><p data-i18n="tip.volw">Light but bulky cargo is charged by the space it takes, not only by its weight.</p></article>
+      <article><strong data-i18n="c.charge">Chargeable weight</strong><p data-i18n="tip.charge">The higher of the real weight and the volumetric weight — this is what you pay for.</p></article>
+    </div>
+  </div>
+</section>
